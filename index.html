@@ -9,28 +9,31 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-<div class="main-container">
     <div class="header-text">
         <h1>Budget</h1>
     </div>
+<div class="main-container">
+    
+
+    <div class="center-container">
 <div class="input-container">
-    <select>
+    <select class="valjare">
         <option class="valj" value="valj">Välj</option>
         <option class="plus" value="+">+</option>
         <option class="minus" value="-">-</option>
     </select>
 
-    <input type="beskrivning" class="besk" placeholder="Beskrivning">
+    <input type="beskrivning" class="besk" id="beskR" placeholder="Beskrivning">
     <input type="nummer" class="num" placeholder="Kr">
-    <button>Lägg till</button>
+    <button class="knapp">Lägg till</button>
 </div> 
 
     
    
     
-    
+<div class="output-container">
     <div class="inkomster">
-        <h3>Inkomst</h3>
+        <h3>Inkomster</h3>
     </div>
 
     
@@ -38,11 +41,16 @@
         <h3>Utgifter</h3>
     </div>
 
+</div>
+<div class="sum">
     <h3>Summa</h3>
     <div class="summa">
-        
     </div>
+</div>
+
+        
+    
 
 </div>
 </body>
-</html>
+</html> 

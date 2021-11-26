@@ -4,6 +4,8 @@ document.querySelector("button").addEventListener("click", count);
 
 const inkomstLista = [];
 const kostnadsLista = [];
+const tabell = [];
+
 
 // Gör att det som knappen får fram stannar kvar
 function count(e) {
@@ -11,6 +13,7 @@ function count(e) {
 
     let utgiftSumma = 0;
     let inkomstSumma = 0;
+    
 
     const select = document.querySelector("select");
 
@@ -25,16 +28,23 @@ function count(e) {
 
     if(select.value == "+") {
 
-        document.querySelector(".inkomster").innerHTML +=`<li class="inkomstLista"> ${beskrivning} ${nummer}  </li>`
-
+        document.querySelector(".inkomster").innerHTML +=`<li class="punktBesk"> ${beskrivning} </li>`
+        document.querySelector(".inkomster").innerHTML +=`<li class="punktNum"> ${nummer} Kr</li>`
+        document.querySelector(".inkomster").style.animation = "para 1s";
         inkomstLista.push(nummer);
+        
+
+       
         
     }
 
    else if(select.value == "-") {
-        document.querySelector(".utgifter").innerHTML +=`<li class="utgifts-lista"> ${beskrivning} ${nummer}</li>`
+        document.querySelector(".utgifter").innerHTML +=`<li class="punktBesk"> ${beskrivning}</li>`
+        document.querySelector(".utgifter").innerHTML +=`<li class="punktNum"> ${nummer} Kr</li>`
+        document.querySelector(".utgifter").style.animation = "nopara 2s";
 
         kostnadsLista.push(nummer);
+        
     }
 
     
@@ -51,7 +61,13 @@ function count(e) {
     })
     //console.log(utgiftSumma);
 
-    document.querySelector(".summa").textContent = inkomstSumma - utgiftSumma;
+    document.querySelector(".summa").textContent = inkomstSumma - utgiftSumma + ' Kr';
+    document.querySelector(".besk").value = "";
+    document.querySelector(".num").value = "";
 
 }
+
+
+
+
 
