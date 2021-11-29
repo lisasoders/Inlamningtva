@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100&display=swap');
+
 * {
     box-sizing: border-box;
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
   
+  // när skärmen blir mindre än 700 px blir inputfälten/knappen en column
   @media screen and (max-width: 700px) {
     .input-container {
       display: flex;
@@ -13,7 +15,6 @@
       margin-bottom: 10px;
       text-align: center;
     }
-    
   }
   
   body {
@@ -28,7 +29,7 @@
     }
   
   .center-container {
-    background-color:rgba(214, 190, 190, 0.774);
+    background: linear-gradient(90deg,rgba(180,252,178,0.7123891793045343)  0%, rgba(255,145,145,0.7572071064754027) 100%);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -55,7 +56,6 @@
   .inkomster {
     text-align: center;
     background-color: rgba(3, 3, 3, 0.514);
-    border: 2px solid rgb(90, 146, 90);
     min-width: 20vw;
     margin: 5vw;
     padding: 0px 20px 20px 20px;
@@ -64,13 +64,13 @@
     color: white;
   
   }
-  
+    // Gör att inkomst-rutan blir grön när man klickar på knappen
     @keyframes para {
       0%   {background-color: rgba(3, 3, 3, 0.226);}
       50%  {background-color:rgb(90, 146, 90);}
       100%  {background-color: rgba(3, 3, 3, 0.226);}
     }
-  
+    // Gör att utgifts-rutan blir rödan när man klickar på knappen
     @keyframes nopara {
       0%   {background-color: rgba(3, 3, 3, 0.226);}
       50%  {background-color:rgb(190, 40, 40);}
@@ -82,7 +82,6 @@
   .utgifter {
     text-align: center;
     background-color: rgba(3, 3, 3, 0.514);
-    border: 2px solid rgb(190, 40, 40);
     min-width: 20vw;
     margin: 5vw;
     padding: 0px 20px 20px 20px;
@@ -90,23 +89,6 @@
     font-family: 'Montserrat', sans-serif;
     color: white;}
   
-  
-  
-  .punktBesk {
-    list-style-type: none;
-    color: white; 
-    font-weight: bold;
-  }
-  
-  .punktNum {
-    list-style-type: none;
-    color: white; 
-    margin-bottom: 5px;
-  }
-    
-  
-  .utgifts-lista {
-    list-style-type: '-'; }
   
     .besk {
       border-radius: 20px;
@@ -117,6 +99,7 @@
       font-family: 'Montserrat', sans-serif;
     }
   
+
     .besk::placeholder {
       color: rgb(0, 0, 0);
       font-family: 'Montserrat', sans-serif;
@@ -151,10 +134,11 @@
       font-weight: bold;
       font-family: 'Montserrat', sans-serif;
       }
-  
+      
+      // Knappen blir lite större när man hovrar muspekaren där
     .knapp:hover {
       transform: scale(1.1);
-      cursor: pointer;
+      cursor: pointer; // muspekaren blir en "pointer" när man hovrar
     }
   
     .valjare {
@@ -178,4 +162,12 @@
     font-family: 'Montserrat', sans-serif;
     }
   
+    .punktBesk {
+        list-style-type: none;
+        font-weight: 700;
+    }
+
+    .punktNum {
+        list-style-type: none;
+    }
     
